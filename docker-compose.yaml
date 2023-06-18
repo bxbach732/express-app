@@ -11,6 +11,7 @@ services:
     depends_on:
       - express-app
   express-app:
+    image: bxbach732/express-app
     build: .
     ports:
       - 8080:8080
