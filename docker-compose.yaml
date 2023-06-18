@@ -8,6 +8,8 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     container_name: watchtower
+    depends_on:
+      - express-app
   express-app:
     build: .
     ports:
